@@ -1,0 +1,24 @@
+{
+    "name": "10up/wpcs-config",
+    "type": "composer-plugin",
+    "require": {
+        "wimg/php-compatibility": "^8.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+        "wp-coding-standards/wpcs": "^0.14.0",
+        "composer-plugin-api": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "TenUp\\PHPCS_Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ephraim Gregor",
+            "email": "ephraim.gregor@10up.com"
+        }
+    ],
+    "extra": {
+        "class": "TenUp\\PHPCS_Composer\\Plugin"
+    }
+}

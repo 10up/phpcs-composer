@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ruleset name="10up-Default">
+	<description>A base ruleset that all other 10up rulesets should extend.</description>
+
+	<exclude-pattern>*/phpunit.xml*</exclude-pattern>
+	<exclude-pattern>*/languages/*</exclude-pattern>
+	<exclude-pattern>*/tests/*</exclude-pattern>
+
+	<!-- Third-party code -->
+	<exclude-pattern>*/bower-components/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+
+	<!-- Don't worry about files that don't contain any code -->
+	<rule ref="Internal.NoCodeFound">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Ignore mixed line-endings warnings -->
+	<rule ref="Internal.LineEndings.Mixed">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Internal exceptions (often occur on minified files) -->
+	<rule ref="Internal.Tokenizer.Exception">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="WordPress-Extra" />
+	<rule ref="PHPCompatibility" />
+
+	<!-- Sets the minimum supported WP version to 4.7, which is over a year old. -->
+	<config name="minimum_supported_wp_version" value="4.7" />
+</ruleset>
