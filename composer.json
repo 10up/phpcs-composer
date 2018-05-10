@@ -1,5 +1,5 @@
 {
-    "name": "chaos-ex-anima/wpcs-config",
+    "name": "10up/wpcs-config",
     "type": "composer-plugin",
     "require": {
         "wimg/php-compatibility": "^8.1",
