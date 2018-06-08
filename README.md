@@ -10,13 +10,13 @@ Composer library to automatically install [PHP_CodeSniffer](https://github.com/s
 The easiest way to install the package is globally, using Composer:
 
 ```bash
-$ composer global require 10up/phcs-config
+$ composer global require 10up/phpcs-config
 ```
 
 You can also install the package on a per-project basis:
 
 ```bash
-$ composer require --dev 10up/phcs-config
+$ composer require --dev 10up/phpcs-config
 ```
 
 ## Usage
