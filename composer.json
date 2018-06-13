@@ -18,6 +18,14 @@
         }
     ],
     "extra": {
-        "class": "TenUp\\PHPCS_Composer\\Plugin"
+        "class": "TenUp\\PHPCS_Composer\\PHPCSConfig"
+    },
+    "scripts": {
+        "lint": [
+            "phpcs ."
+        ],
+        "test": [
+            "TenUp\\PHPCS_Composer\\PHPCSConfig::run"
+        ]
     }
 }
