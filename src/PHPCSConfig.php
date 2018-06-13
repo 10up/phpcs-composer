@@ -15,6 +15,7 @@
 namespace TenUp\PHPCS_Composer;
 
 use Composer\Plugin\PluginInterface;
+use Composer\EventDispatcher\EventSubscriberInterface;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Script\Event;
@@ -25,7 +26,7 @@ use Symfony\Component\Process\ProcessBuilder;
 /**
  * PHPCS Configuration class.
  */
-class PHPCSConfig implements PluginInterface {
+class PHPCSConfig implements PluginInterface, EventSubscriberInterface {
 
 	/**
 	 * Name of environment variable to override PHP Compatibility version default.
@@ -152,7 +153,9 @@ class PHPCSConfig implements PluginInterface {
 	 */
 	public function triggerUpdates() {
 		$updated_default = $this->set_default( self::PHPCS_CONFIG_DEFAULT_KEY, self::DEFAULT_RULESET );
-		$updated_version = $this->set_default( self::PHPCS_CONFIG_VERSION_KEY, $php_version );
+		$updated_version = $this->set_default( self::PHPCS_CONFIG_VERSION_KEY, $this->php_version );
+
+		$this->set_default( 'installed_paths', 'vendor/10up/wpcs-config/10up-Default' );
 
 		if ( ! $updated_default && ! $updated_version ) {
 			$this->io->write( '<info>Nothing to install or update.</info>' );
