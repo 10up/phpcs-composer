@@ -33,7 +33,7 @@ class PHPCSConfig implements PluginInterface, EventSubscriberInterface {
 	 *
 	 * @var string
 	 */
-	const PHP_VERSION_ENV_KEY = 'PHPCS_PHP_VERSIONS';
+	const PHP_VERSION_ENV_KEY = 'PHPCS_PHP_VERSION';
 
 	/**
 	 * Default version for PHP Compatibility.
