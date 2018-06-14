@@ -50,8 +50,10 @@
 		<!-- Comment punctuation doesn't matter -->
 		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
 	</rule>
-	<rule ref="PHPCompatibility" />
 
 	<!-- Sets the minimum supported WP version to 4.7, which is over a year old. -->
 	<config name="minimum_supported_wp_version" value="4.7" />
+
+	<!-- Loads the PHP Compatibility ruleset. -->
+	<rule ref="PHPCompatibility" />
 </ruleset>
