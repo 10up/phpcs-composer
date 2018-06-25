@@ -1,5 +1,5 @@
 {
-    "name": "10up/wpcs-config",
+    "name": "10up/phpcs-composer",
     "type": "composer-plugin",
     "version": "dev-master",
     "require": {
