@@ -2,6 +2,7 @@
     "name": "10up/phpcs-composer",
     "type": "composer-plugin",
     "version": "dev-master",
+    "license": "MIT",
     "require": {
         "wimg/php-compatibility": "*",
         "wp-coding-standards/wpcs": "*",
