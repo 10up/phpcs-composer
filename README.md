@@ -10,7 +10,7 @@ Composer library to provide drop in installation and configuration of [WPCS](htt
 Install the library via Composer:
 
 ```bash
-$ composer require --dev 10up/phpcs-config
+$ composer require --dev 10up/phpcs-composer
 ```
 
 That's it!
