@@ -155,7 +155,7 @@ class PHPCSConfig implements PluginInterface, EventSubscriberInterface {
 		$updated_default = $this->set_default( self::PHPCS_CONFIG_DEFAULT_KEY, self::DEFAULT_RULESET );
 		$updated_version = $this->set_default( self::PHPCS_CONFIG_VERSION_KEY, $this->php_version );
 
-		$this->set_default( 'installed_paths', 'vendor/10up/wpcs-config/10up-Default' );
+		$this->set_default( 'installed_paths', 'vendor/10up/phpcs-composer/10up-Default' );
 
 		if ( ! $updated_default && ! $updated_version ) {
 			$this->io->write( '<info>Nothing to install or update.</info>' );
