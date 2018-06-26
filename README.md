@@ -44,3 +44,14 @@ $ composer run lint
 PHPCS Configuration plays nicely with Continuous Integration solutions. Out of the box, the library loads the `10up-Default` ruleset, and checks for syntax errors for PHP 7 or higher.
 
 To override the default PHP version check, set the `PHPCS_PHP_VERSION` environment variable before `composer install`. See [here](https://github.com/wimg/PHPCompatibility#sniffing-your-code-for-compatibility-with-specific-php-versions) for more information about valid values.
+
+### IDE Integration
+
+Some IDE integrations of PHPCS fail to register the `10up-Default` ruleset. In order to rectify this, place `phpcs.xml` at your project root:
+
+```xml
+<?xml version="1.0"?>
+<ruleset name="Project Rules">
+	<rule ref="10up-Default" />
+</ruleset>
+```
