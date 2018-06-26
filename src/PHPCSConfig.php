@@ -64,6 +64,20 @@ class PHPCSConfig implements PluginInterface, EventSubscriberInterface {
 	const PHPCS_CONFIG_DEFAULT_KEY = 'default_standard';
 
 	/**
+	 * Name of the PHPCS config key to control installed paths.
+	 *
+	 * @var string
+	 */
+	const PHPCS_CONFIG_PATH_KEY = 'installed_paths';
+
+	/**
+	 * Relative path to ruleset.
+	 *
+	 * @var string
+	 */
+	const PHPCS_CONFIG_PATH = 'vendor/10up/phpcs-composer/10up-Default';
+
+	/**
 	 * Reference to Composer class.
 	 *
 	 * @var Composer
@@ -154,10 +168,9 @@ class PHPCSConfig implements PluginInterface, EventSubscriberInterface {
 	public function triggerUpdates() {
 		$updated_default = $this->set_default( self::PHPCS_CONFIG_DEFAULT_KEY, self::DEFAULT_RULESET );
 		$updated_version = $this->set_default( self::PHPCS_CONFIG_VERSION_KEY, $this->php_version );
+		$updated_paths   = $this->set_default( self::PHPCS_CONFIG_PATH_KEY, self::PHPCS_CONFIG_PATH );
 
-		$this->set_default( 'installed_paths', 'vendor/10up/phpcs-composer/10up-Default' );
-
-		if ( ! $updated_default && ! $updated_version ) {
+		if ( ! $updated_default && ! $updated_version && ! $updated_paths ) {
 			$this->io->write( '<info>Nothing to install or update.</info>' );
 		}
 	}
