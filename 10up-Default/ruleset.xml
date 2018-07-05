@@ -58,6 +58,11 @@
 	<!-- Sets the minimum supported WP version to 4.7, which is over a year old. -->
 	<config name="minimum_supported_wp_version" value="4.7" />
 
+	<!-- Make missing translator comment a warning. -->
+	<rule ref="WordPress.WP.I18n.MissingTranslatorsComment">
+		<type>warning</type>
+	</rule>
+
 	<!-- Loads the PHP Compatibility ruleset. -->
 	<rule ref="PHPCompatibility" />
 </ruleset>
