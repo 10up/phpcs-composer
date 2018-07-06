@@ -36,7 +36,10 @@
 	<config name="ignore_warnings_on_exit" value="1"/>
 
 	<!-- Enforce doc standards -->
-	<rule ref="WordPress-Docs"/>
+	<rule ref="WordPress-Docs">
+		<!-- Don't worry about capitolizing long lines -->
+		<exclude name="Generic.Commenting.DocComment.LongNotCapital"/>
+	</rule>
 
 	<rule ref="WordPress-Extra">
 		<!-- Forget about file names -->
