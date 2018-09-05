@@ -1,5 +1,5 @@
 # 10up PHPCS Configuration
-Composer library to provide drop in installation and configuration of [WPCS](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) and [PHPCompatibility](https://github.com/wimg/PHPCompatibility), setting reasonable defaults for WordPress development with nearly zero configuration.
+Composer library to provide drop in installation and configuration of [WPCS](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) and [PHPCompatibilityWP](https://github.com/PHPCompatibility/PHPCompatibilityWP), setting reasonable defaults for WordPress development with nearly zero configuration.
 
 <p align="center">
 <a href="http://10up.com/contact/"><img src="https://10updotcom-wpengine.s3.amazonaws.com/uploads/2016/10/10up-Github-Banner.png" width="850"></a>
@@ -43,7 +43,7 @@ $ composer run lint
 
 PHPCS Configuration plays nicely with Continuous Integration solutions. Out of the box, the library loads the `10up-Default` ruleset, and checks for syntax errors for PHP 7 or higher.
 
-To override the default PHP version check, set the `PHPCS_PHP_VERSION` environment variable before `composer install`. See [here](https://github.com/wimg/PHPCompatibility#sniffing-your-code-for-compatibility-with-specific-php-versions) for more information about valid values.
+To override the default PHP version check, set the `PHPCS_PHP_VERSION` environment variable before `composer install`. See [here](https://github.com/PHPCompatibility/PHPCompatibility#sniffing-your-code-for-compatibility-with-specific-php-versions) for more information about valid values.
 
 ### IDE Integration
 
