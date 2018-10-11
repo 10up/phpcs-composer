@@ -75,7 +75,7 @@ class PHPCSConfig implements PluginInterface, EventSubscriberInterface {
 	 *
 	 * @var string
 	 */
-	const PHPCS_CONFIG_PATH = 'vendor/10up/phpcs-composer/10up-Default,vendor/wp-coding-standards/wpcs,vendor/phpcompatibility/php-compatibility,vendor/phpcompatibility/phpcompatibility-wp';
+	const PHPCS_CONFIG_PATH = 'vendor/10up/phpcs-composer/10up-Default,vendor/wp-coding-standards/wpcs,vendor/phpcompatibility/php-compatibility,vendor/phpcompatibility/phpcompatibility-paragonie,vendor/phpcompatibility/phpcompatibility-wp';
 
 	/**
 	 * Reference to Composer class.

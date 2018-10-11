@@ -4,7 +4,7 @@
     "version": "dev-master",
     "license": "MIT",
     "require": {
-        "phpcompatibility/phpcompatibility-wp": "*",
+        "phpcompatibility/phpcompatibility-wp": "^2",
         "wp-coding-standards/wpcs": "*",
         "composer-plugin-api": "^1.1"
     },
