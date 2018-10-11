@@ -47,7 +47,7 @@ To override the default PHP version check, set the `PHPCS_PHP_VERSION` environme
 
 ### IDE Integration
 
-Some IDE integrations of PHPCS fail to register the `10up-Default` ruleset. In order to rectify this, place `phpcs.xml` at your project root:
+Some IDE integrations of PHPCS fail to register the `10up-Default` ruleset. In order to rectify this, place `.phpcs.xml.dist` at your project root:
 
 ```xml
 <?xml version="1.0"?>
