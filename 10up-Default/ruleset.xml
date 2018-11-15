@@ -2,8 +2,6 @@
 <ruleset name="10up-Default">
 	<description>A base ruleset that all other 10up rulesets should extend.</description>
 
-	<config name="installed_paths" value="vendor/wp-coding-standards/wpcs,vendor/wimg/php-compatibility" />
-
 	<exclude-pattern>*/phpunit.xml*</exclude-pattern>
 	<exclude-pattern>*/languages/*</exclude-pattern>
 	<exclude-pattern>*/tests/*</exclude-pattern>
