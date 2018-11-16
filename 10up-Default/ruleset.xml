@@ -66,6 +66,11 @@
 		<type>warning</type>
 	</rule>
 
+	<!-- Sometimes we need to override globals -->
+	<rule ref="WordPress.WP.GlobalVariablesOverride.OverrideProhibited">
+		<type>warning</type>
+	</rule>
+
 	<!-- Loads the PHP Compatibility ruleset. -->
 	<rule ref="PHPCompatibility" />
 </ruleset>
