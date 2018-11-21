@@ -39,6 +39,9 @@
 	<rule ref="WordPress-Docs">
 		<!-- Don't worry about capitolizing long lines -->
 		<exclude name="Generic.Commenting.DocComment.LongNotCapital"/>
+
+		<!-- We dont need class comments since we have file comments -->
+		<exclude name="Squiz.Commenting.ClassComment.Missing"/>
 	</rule>
 
 	<rule ref="WordPress-Extra">
