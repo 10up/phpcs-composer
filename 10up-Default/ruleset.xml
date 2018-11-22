@@ -40,9 +40,6 @@
 		<!-- Don't worry about capitolizing long lines -->
 		<exclude name="Generic.Commenting.DocComment.LongNotCapital"/>
 
-		<!-- We dont need class comments since we have file comments -->
-		<exclude name="Squiz.Commenting.ClassComment.Missing"/>
-
 		<!-- Dont need to capitalize first letter -->
 		<exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
 	</rule>
