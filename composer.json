@@ -5,8 +5,8 @@
     "license": "MIT",
     "require": {
         "dealerdirect/phpcodesniffer-composer-installer": "*",
-        "squizlabs/php_codesniffer" : "^3.0",
-        "wimg/php-compatibility": "*",
+        "phpcompatibility/phpcompatibility-wp": "^2",
+        "squizlabs/php_codesniffer" : "^3.4.0",
         "wp-coding-standards/wpcs": "*"
     },
     "prefer-stable" : true,
