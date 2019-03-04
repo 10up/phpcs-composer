@@ -56,6 +56,7 @@
 
 		<!-- Comment punctuation doesn't matter -->
 		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
+		<exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop"/>
 	</rule>
 
 	<!-- Sets the minimum supported WP version to 4.7, which is over a year old. -->
