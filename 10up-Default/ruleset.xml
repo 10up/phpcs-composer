@@ -57,9 +57,12 @@
 		<!-- Comment punctuation doesn't matter -->
 		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
 		<exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop"/>
-		
+
 		<!-- Allow shorthand array syntax -->
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+
+		<!-- Allow WP global modification -->
+		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
 	</rule>
 
 	<!-- Sets the minimum supported WP version to 4.7, which is over a year old. -->
