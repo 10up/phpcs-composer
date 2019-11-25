@@ -34,7 +34,7 @@
 
 	<!-- Enforce doc standards -->
 	<rule ref="WordPress-Docs">
-		<!-- Don't worry about capitolizing long lines -->
+		<!-- Don't worry about capitalizing long lines -->
 		<exclude name="Generic.Commenting.DocComment.LongNotCapital"/>
 
 		<!-- Dont need to capitalize first letter -->
