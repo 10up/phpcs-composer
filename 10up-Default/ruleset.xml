@@ -63,6 +63,9 @@
 
 		<!-- Allow WP global modification -->
 		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
+
+		<!-- This nonce sniff almost never works right -->
+		<exclude name="WordPress.Security.NonceVerification.Missing"/>
 	</rule>
 
 	<!-- Sets the minimum supported WP version to 4.7, which is over a year old. -->
