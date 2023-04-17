@@ -32,6 +32,14 @@
 	<!-- For CI, don't fail on warnings -->
 	<config name="ignore_warnings_on_exit" value="1"/>
 
+	<rule ref="WordPress.DB.PreparedSQL"/>
+	<rule ref="WordPress.DB.DirectDatabaseQuery"/>
+	<rule ref="WordPress.DB.SlowDBQuery"/>
+	<rule ref="WordPress.WP.PostsPerPage">
+		<properties>
+			<property name="posts_per_page" value="200"/>
+		</properties>
+	</rule>
 	<!-- Enforce doc standards -->
 	<rule ref="WordPress-Docs">
 		<!-- Don't worry about capitalizing long lines -->
