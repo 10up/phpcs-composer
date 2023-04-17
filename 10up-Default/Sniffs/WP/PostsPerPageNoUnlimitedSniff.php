@@ -3,7 +3,7 @@
  * TenUpDefault Coding Standard.
  *
  * @package PhpcsComposer
- * @link    https://github.com/WordPress/WordPress-Coding-Standards
+ * @link    https://github.com/10up/phpcs-composer
  * @license https://opensource.org/licenses/MIT MIT
  */
 
