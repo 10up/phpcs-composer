@@ -74,9 +74,6 @@
 
 		<!-- Allow WP global modification -->
 		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
-
-		<!-- This nonce sniff almost never works right -->
-		<exclude name="WordPress.Security.NonceVerification.Missing"/>
 	</rule>
 
 	<!-- Sets the minimum supported WP version to 4.7, which is over a year old. -->
@@ -97,6 +94,24 @@
 
 	<!-- Make sure that the proper escaping functions are being used -->
 	<rule ref="WordPressVIPMinimum.Security.ProperEscapingFunction"/>
+
+
+	<rule ref="WP.Security.ValidatedSanitizedInput">
+		<properties>
+			<property name="customUnslashingSanitizingFunctions" type="array">
+				<!--
+					Allow checking nonces without sanitization.
+					
+					WordPress nonces do not include any characters requiring
+					slashes so can be considered unslashed. The verification
+					is a character by character comparison to a fixed value
+					so sanitization is not required as only a valid nonce
+					string should be allowed to pass.
+				-->
+				<element value="wp_verify_nonce" />
+			</property>
+		</properties>
+	</rule>
 
 	<!-- Loads the PHP Compatibility ruleset. -->
 	<rule ref="PHPCompatibilityWP" />
