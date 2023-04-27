@@ -50,6 +50,9 @@
 	</rule>
 
 	<rule ref="WordPress-Extra">
+		<!-- Undeprecated in WordPress 5.9.0 -->
+		<exclude name="WordPress.WP.DeprecatedFunctions.sanitize_urlFound" />
+
 		<!-- Forget about file names -->
 		<exclude name="WordPress.Files.FileName"/>
 
