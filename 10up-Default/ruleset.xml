@@ -98,6 +98,16 @@
 	<!-- Make sure that the proper escaping functions are being used -->
 	<rule ref="WordPressVIPMinimum.Security.ProperEscapingFunction"/>
 
+	<!-- Validate sanitised input. -->
+	<rule ref="WordPress.Security.ValidatedSanitizedInput">
+		<properties>
+			<property name="customSanitizingFunctions" type="array">
+				<!-- sanitize_url() is an undeprecated sanitizing function. -->
+				<element value="sanitize_url" />
+			</property>
+		</properties>
+	</rule>
+
 	<!-- Loads the PHP Compatibility ruleset. -->
 	<rule ref="PHPCompatibilityWP" />
 
