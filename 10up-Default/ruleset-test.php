@@ -162,6 +162,12 @@ $expected = [
 	'messages' => [],
 ];
 
+// If we're running on PHP 7.4, we need to account for the error thrown because `restore_include_path()` is deprecated.
+// See https://www.php.net/manual/en/function.restore-include-path.php
+if ( version_compare( PHP_VERSION, '7.4.0', '>=' ) && version_compare( PHP_VERSION, '8.0.0', '<' ) ) {
+	$expected['errors'][ 222 ] = 1;
+}
+
 require __DIR__ . '/../tests/RulesetTest.php';
 
 // Run the tests!
