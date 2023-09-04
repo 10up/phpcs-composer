@@ -51,7 +51,7 @@
 
 	<rule ref="WordPress-Extra">
 		<!-- Undeprecated in WordPress 5.9.0 -->
-		<exclude name="WordPress.WP.DeprecatedFunctions.sanitize_urlFound" />
+		<exclude name="WordPress.WP.DeprecatedFunctions.sanitize_urlFound"/>
 
 		<!-- Forget about file names -->
 		<exclude name="WordPress.Files.FileName"/>
@@ -80,8 +80,7 @@
 	</rule>
 
 	<!-- Sets the minimum supported WP version. -->
-	<config name="minimum_supported_wp_version" value="6.0" />
-
+	<config name="minimum_supported_wp_version" value="6.0"/>
 	<!-- Make missing translator comment a warning. -->
 	<rule ref="WordPress.WP.I18n.MissingTranslatorsComment">
 		<type>warning</type>
@@ -103,13 +102,13 @@
 		<properties>
 			<property name="customSanitizingFunctions" type="array">
 				<!-- sanitize_url() is an undeprecated sanitizing function. -->
-				<element value="sanitize_url" />
+				<element value="sanitize_url"/>
 			</property>
 		</properties>
 	</rule>
 
 	<!-- Loads the PHP Compatibility ruleset. -->
-	<rule ref="PHPCompatibilityWP" />
+	<rule ref="PHPCompatibilityWP"/>
 
 	<!-- PHP version check. -->
 	<config name="testVersion" value="8.1-"/>
