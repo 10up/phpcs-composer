@@ -93,25 +93,5 @@ jobs:
           composer-options: --ignore-platform-req=php+
           custom-cache-suffix: $(date -u "+%Y-%m")
 
-      - name: "Composer: downgrade PHPCS dependencies for tests (lowest)"
-        if: ${{ ! startsWith( matrix.php, '8' ) && matrix.dependencies == 'lowest' }}
-        run: >
-          composer update --prefer-lowest --no-scripts --no-interaction
-          squizlabs/php_codesniffer
-          phpcsstandards/phpcsutils
-          phpcsstandards/phpcsextra
-          sirbrillig/phpcs-variable-analysis
-          wp-coding-standards/wpcs
-
-      - name: "Composer: downgrade PHPCS dependencies for tests (lowest) - with ignore platform"
-        if: ${{ startsWith( matrix.php, '8' ) && matrix.dependencies == 'lowest' }}
-        run: >
-          composer update --prefer-lowest --no-scripts --no-interaction --ignore-platform-req=php+
-          squizlabs/php_codesniffer
-          phpcsstandards/phpcsutils
-          phpcsstandards/phpcsextra
-          sirbrillig/phpcs-variable-analysis
-          wp-coding-standards/wpcs
-
       - name: Run the ruleset tests
         run: ./bin/ruleset-tests
