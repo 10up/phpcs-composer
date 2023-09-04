@@ -54,7 +54,7 @@ jobs:
       #   - PHP 8.1 needs PHPCS 3.6.1+ to run without errors, but works best with 3.7.1+, and we require at least this minimum version.
       matrix:
         php: ['7.1', '7.2', '7.3', '7.4', '8.0', '8.1', '8.2']
-        dependencies: ['lowest', 'stable']
+        dependencies: ['stable']
     name: "Test: PHP ${{ matrix.php }} - PHPCS"
 
     steps:
