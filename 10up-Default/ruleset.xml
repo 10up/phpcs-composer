@@ -70,7 +70,7 @@
 		<exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop"/>
 
 		<!-- Allow shorthand array syntax -->
-		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"/>
 
 		<!-- Allow WP global modification -->
 		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
@@ -79,7 +79,7 @@
 		<exclude name="WordPress.Security.NonceVerification.Missing"/>
 	</rule>
 
-	<!-- Sets the minimum supported WP version to 4.7, which is over a year old. -->
+	<!-- Sets the minimum supported WP version. -->
 	<config name="minimum_supported_wp_version" value="6.0" />
 
 	<!-- Make missing translator comment a warning. -->
