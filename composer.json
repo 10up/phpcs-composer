@@ -1,5 +1,6 @@
 {
     "name": "10up/phpcs-composer",
+    "description": "10up's PHP CodeSniffer Ruleset",
     "type": "phpcodesniffer-standard",
     "license": "MIT",
     "require": {
@@ -12,8 +13,8 @@
     "prefer-stable" : true,
     "authors": [
         {
-            "name": "Ephraim Gregor",
-            "email": "ephraim.gregor@10up.com"
+          "name": "10up",
+          "homepage": "https://10up.com/"
         }
     ],
     "scripts": {
@@ -24,5 +25,10 @@
       "post-install-cmd": "@config-cs",
       "post-update-cmd": "@config-cs",
       "lint": "\"vendor/bin/phpcs\" . "
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
