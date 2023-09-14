@@ -1,7 +1,6 @@
 {
     "name": "10up/phpcs-composer",
     "type": "phpcodesniffer-standard",
-    "version": "dev-master",
     "license": "MIT",
     "require": {
         "dealerdirect/phpcodesniffer-composer-installer": "*",
