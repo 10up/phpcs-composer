@@ -1,13 +1,12 @@
 {
     "name": "10up/phpcs-composer",
     "type": "phpcodesniffer-standard",
-    "version": "dev-master",
     "license": "MIT",
     "require": {
         "dealerdirect/phpcodesniffer-composer-installer": "*",
         "phpcompatibility/phpcompatibility-wp": "^2",
         "wp-coding-standards/wpcs": "^3.0",
-         "automattic/vipwpcs": "dev-develop"
+        "automattic/vipwpcs": "dev-develop"
     },
     "prefer-stable" : true,
     "scripts": {
