@@ -172,8 +172,14 @@ if ( version_compare( PHP_VERSION, '7.4.0', '>=' ) && version_compare( PHP_VERSI
 	$expected['errors'][ 222 ] = 2;
 }
 
+// We have some specific errors that are only thrown on PHP 8.2+.
 if ( version_compare( PHP_VERSION, '8.2.0', '<' ) ) {
 	$expected['errors'][ 486 ] = 0;
+}
+
+if ( version_compare( PHP_VERSION, '7.1', '=' ) ) {
+	$expected['errors'][ 483 ] = 5;
+	$expected['warnings'][ 1 ] = 1;
 }
 
 require __DIR__ . '/../tests/RulesetTest.php';
