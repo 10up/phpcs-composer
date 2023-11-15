@@ -177,8 +177,8 @@ if ( version_compare( PHP_VERSION, '8.2.0', '<' ) ) {
 	$expected['errors'][ 486 ] = 0;
 }
 
-if ( version_compare( PHP_VERSION, '7.1', '=' ) ) {
-	$expected['errors'][ 483 ] = 5;
+if ( version_compare( PHP_VERSION, '7.2', '<' ) ) {
+	$expected['errors'][ 483 ] = 4;
 	$expected['warnings'][ 1 ] = 1;
 }
 
