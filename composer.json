@@ -3,7 +3,12 @@
   "description": "10up's PHP CodeSniffer Ruleset",
   "type": "phpcodesniffer-standard",
   "license": "MIT",
-  "require": {},
+  "require": {
+    "dealerdirect/phpcodesniffer-composer-installer": "*",
+    "phpcompatibility/phpcompatibility-wp": "^2",
+    "automattic/vipwpcs": "^3.0",
+    "phpcompatibility/php-compatibility": "dev-develop as 9.99.99"
+  },
   "prefer-stable": true,
   "authors": [
     {
@@ -25,11 +30,5 @@
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
   },
-  "minimum-stability": "dev",
-  "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "*",
-    "phpcompatibility/phpcompatibility-wp": "^2",
-    "automattic/vipwpcs": "^3.0",
-    "phpcompatibility/php-compatibility": "dev-develop as 9.99.99"
-  }
+  "minimum-stability": "dev"
 }
