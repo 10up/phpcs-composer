@@ -4,10 +4,8 @@
   "type": "phpcodesniffer-standard",
   "license": "MIT",
   "require": {
-    "dealerdirect/phpcodesniffer-composer-installer": "*",
-    "phpcompatibility/phpcompatibility-wp": "^2",
     "automattic/vipwpcs": "^3.0",
-    "phpcompatibility/php-compatibility": "dev-develop as 9.99.99"
+    "phpcompatibility/phpcompatibility-wp": "^2"
   },
   "prefer-stable": true,
   "authors": [
@@ -18,7 +16,7 @@
   ],
   "scripts": {
     "config-cs": [
-      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
+      "PHPCSStandards\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
       "\"vendor/bin/phpcs\" --config-set default_standard 10up-Default"
     ],
     "post-install-cmd": "@config-cs",
@@ -30,5 +28,9 @@
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "*",
+    "phpcompatibility/php-compatibility": "dev-develop as 9.99.99"
+  }
 }
