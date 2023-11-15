@@ -47,6 +47,7 @@ $expected = [
 		155 => 1,
 		162 => 2,
 		168 => 3,
+		222 => 1,
 		226 => 1,
 		230 => 1,
 		275 => 1,
@@ -82,7 +83,9 @@ $expected = [
 		463 => 1,
 		468 => 1,
 		475 => 1,
-		478 => 2,
+		478 => 1,
+		483 => 4,
+		486 => 1,
 	],
 	'warnings' => [
 		15  => 1,
@@ -101,9 +104,7 @@ $expected = [
 		106 => 1,
 		118 => 1,
 		125 => 1,
-		144 => 1,
 		152 => 1,
-		155 => 1,
 		171 => 1,
 		174 => 1,
 		177 => 1,
@@ -121,7 +122,7 @@ $expected = [
 		213 => 1,
 		216 => 1,
 		219 => 1,
-		222 => 2,
+		222 => 1,
 		226 => 1,
 		230 => 1,
 		233 => 2,
@@ -137,6 +138,8 @@ $expected = [
 		263 => 1,
 		266 => 1,
 		269 => 1,
+		272 => 1,
+		305 => 1,
 		312 => 1,
 		316 => 1,
 		320 => 1,
@@ -158,6 +161,7 @@ $expected = [
 		446 => 1,
 		449 => 1,
 		475 => 1,
+		486 => 1,
 	],
 	'messages' => [],
 ];
@@ -165,7 +169,11 @@ $expected = [
 // If we're running on PHP 7.4, we need to account for the error thrown because `restore_include_path()` is deprecated.
 // See https://www.php.net/manual/en/function.restore-include-path.php
 if ( version_compare( PHP_VERSION, '7.4.0', '>=' ) && version_compare( PHP_VERSION, '8.0.0', '<' ) ) {
-	$expected['errors'][ 222 ] = 1;
+	$expected['errors'][ 222 ] = 2;
+}
+
+if ( version_compare( PHP_VERSION, '8.2.0', '<' ) ) {
+	$expected['errors'][ 486 ] = 0;
 }
 
 require __DIR__ . '/../tests/RulesetTest.php';

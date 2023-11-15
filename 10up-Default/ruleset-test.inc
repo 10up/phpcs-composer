@@ -139,8 +139,8 @@ class TestClass extends MyClass
 class OldClass
 // Errors: Generic.Classes.OpeningBraceSameLine.BraceOnNewLine
 {
+
 	// Errors: Squiz.Scope.MethodScope.Missing
-	// Warnings: (PHPCompatibility.FunctionNameRestrictions.RemovedPHP4StyleConstructors.Found
 	function OldClass()
 	// Errors: (Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine
 	{
@@ -150,8 +150,8 @@ class OldClass
 // Errors: Generic.Files.OneObjectStructurePerFile.MultipleFound
 // Warnings: Generic.Classes.DuplicateClassName.Found
 class TestClass extends MyClass {
+
 	// Errors: Squiz.Scope.MethodScope.Missing
-	// Warnings: PHPCompatibility.FunctionNameRestrictions.RemovedPHP4StyleConstructors.Found
 	function TestClass() {
 		parent::MyClass();
 		parent::__construct();
@@ -478,4 +478,9 @@ $var = ( $test = get_post( $post ) ) ? $test : '';
 // Error. ?>
 
 
+<?php
+// MCrypt is deprecated in PHP 7.1 and removed in PHP 7.2.
+$secret = mcrypt_encrypt( MCRYPT_3DES, '12345678abcdefgh', 'test', MCRYPT_MODE_CBC, '12345678' );
 
+// Function utf8_encode() is deprecated since PHP 8.2;
+utf8_encode( 'test' );
