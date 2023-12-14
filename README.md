@@ -9,7 +9,7 @@
 Install the library via Composer:
 
 ```bash
-$ composer require --dev 10up/phpcs-composer:dev-master
+$ composer require --dev 10up/phpcs-composer:"~3"
 ```
 
 That's it!
@@ -40,7 +40,7 @@ $ composer run lint
 
 ### Continuous Integration
 
-PHPCS Configuration plays nicely with Continuous Integration solutions. Out of the box, the library loads the `10up-Default` ruleset, and checks for syntax errors for PHP 7 or higher.
+PHPCS Configuration plays nicely with Continuous Integration solutions. Out of the box, the library loads the `10up-Default` ruleset, and checks for syntax errors for PHP 8.2 or higher.
 
 To override the default PHP version check, set the `--runtime-set testVersion 7.0-` configuration option. Example for PHP version 7.2 and above:
 

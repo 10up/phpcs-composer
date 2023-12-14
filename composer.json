@@ -1,34 +1,36 @@
 {
-    "name": "10up/phpcs-composer",
-    "description": "10up's PHP CodeSniffer Ruleset",
-    "type": "phpcodesniffer-standard",
-    "license": "MIT",
-    "require": {
-        "dealerdirect/phpcodesniffer-composer-installer": "*",
-        "phpcompatibility/phpcompatibility-wp": "^2",
-        "squizlabs/php_codesniffer" : "3.7.1",
-        "wp-coding-standards/wpcs": "*",
-         "automattic/vipwpcs": "^2.3"
-    },
-    "prefer-stable" : true,
-    "authors": [
-        {
-          "name": "10up",
-          "homepage": "https://10up.com/"
-        }
-    ],
-    "scripts": {
-      "config-cs": [
-        "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
-        "\"vendor/bin/phpcs\" --config-set default_standard 10up-Default"
-      ],
-      "post-install-cmd": "@config-cs",
-      "post-update-cmd": "@config-cs",
-      "lint": "\"vendor/bin/phpcs\" . "
-    },
-    "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        }
+  "name": "10up/phpcs-composer",
+  "description": "10up's PHP CodeSniffer Ruleset",
+  "type": "phpcodesniffer-standard",
+  "license": "MIT",
+  "require": {
+    "automattic/vipwpcs": "^3.0",
+    "phpcompatibility/phpcompatibility-wp": "^2"
+  },
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "10up",
+      "homepage": "https://10up.com/"
     }
+  ],
+  "scripts": {
+    "config-cs": [
+      "PHPCSStandards\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
+      "\"vendor/bin/phpcs\" --config-set default_standard 10up-Default"
+    ],
+    "post-install-cmd": "@config-cs",
+    "post-update-cmd": "@config-cs",
+    "lint": "\"vendor/bin/phpcs\" . "
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "*",
+    "phpcompatibility/php-compatibility": "dev-develop as 9.99.99"
+  }
 }
