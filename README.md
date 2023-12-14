@@ -9,7 +9,7 @@
 Install the library via Composer:
 
 ```bash
-$ composer require --dev 10up/phpcs-composer:"~3"
+$ composer require --dev 10up/phpcs-composer:"^3.0"
 ```
 
 That's it!
