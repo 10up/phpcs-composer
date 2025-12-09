@@ -31,6 +31,6 @@
   "minimum-stability": "dev",
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "*",
-    "phpcompatibility/php-compatibility": "dev-develop as 9.99.99"
+    "phpcompatibility/php-compatibility": "10.0.0-alpha2 as 9.99.99"
   }
 }
