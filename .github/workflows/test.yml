@@ -1,5 +1,8 @@
 name: Test
 
+permissions:
+  contents: read
+
 on:
   # Run on pushes to `master` and on all pull requests.
   # Prevent the "push" build from running when there are only irrelevant changes.
