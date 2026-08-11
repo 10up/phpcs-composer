@@ -484,3 +484,10 @@ $secret = mcrypt_encrypt( MCRYPT_3DES, '12345678abcdefgh', 'test', MCRYPT_MODE_C
 
 // Function utf8_encode() is deprecated since PHP 8.2;
 utf8_encode( 'test' );
+
+?>
+
+<!-- Must not trigger warnings or errors -->
+<?php if ( is_singular() ) : ?>
+	<p>Also must not trigger warnings or errors.</p>
+<?php endif; ?>
