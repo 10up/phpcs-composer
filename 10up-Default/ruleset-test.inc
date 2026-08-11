@@ -158,7 +158,7 @@ class TestClass extends MyClass {
 	}
 }
 
-// Errors: Squiz.PHP.EmbeddedPhp.ContentAfterEnd & Generic.PHP.DisallowShortOpenTag.EchoFound
+// Errors: Squiz.PHP.EmbeddedPhp.ContentAfterEnd, Squiz.PHP.EmbeddedPhp.ContentAfterOpen, Squiz.PHP.EmbeddedPhp.ContentBeforeOpen & Generic.PHP.DisallowShortOpenTag.EchoFound
 ?> <?= esc_html( $var );
 
 // Warnings: (Squiz.PHP.CommentedOutCode.Found <!-- Warning. -->
