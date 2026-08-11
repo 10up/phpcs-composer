@@ -406,7 +406,7 @@ ini_alter( 'foo', true );
 // Warnings: WordPress.WP.AlternativeFunctions.curl_curl_init
 curl_init();
 
-// Warnings: WordPress.WP.AlternativeFunctions.curl_curl_close
+// Warnings: WordPress.WP.AlternativeFunctions.curl_curl_close & PHPCompatibility.FunctionUse.RemovedFunctions.curl_closeDeprecated
 curl_close( $ch );
 
 // Warnings: WordPress.WP.AlternativeFunctions.curl_curl_getinfo
