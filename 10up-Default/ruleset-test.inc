@@ -158,7 +158,7 @@ class TestClass extends MyClass {
 	}
 }
 
-// Errors: Squiz.PHP.EmbeddedPhp.ContentAfterEnd & Generic.PHP.DisallowShortOpenTag.EchoFound
+// Errors: Squiz.PHP.EmbeddedPhp.ContentAfterEnd, Squiz.PHP.EmbeddedPhp.ContentAfterOpen, Squiz.PHP.EmbeddedPhp.ContentBeforeOpen & Generic.PHP.DisallowShortOpenTag.EchoFound
 ?> <?= esc_html( $var );
 
 // Warnings: (Squiz.PHP.CommentedOutCode.Found <!-- Warning. -->
@@ -406,7 +406,7 @@ ini_alter( 'foo', true );
 // Warnings: WordPress.WP.AlternativeFunctions.curl_curl_init
 curl_init();
 
-// Warnings: WordPress.WP.AlternativeFunctions.curl_curl_close
+// Warnings: WordPress.WP.AlternativeFunctions.curl_curl_close & PHPCompatibility.FunctionUse.RemovedFunctions.curl_closeDeprecated
 curl_close( $ch );
 
 // Warnings: WordPress.WP.AlternativeFunctions.curl_curl_getinfo
@@ -484,3 +484,10 @@ $secret = mcrypt_encrypt( MCRYPT_3DES, '12345678abcdefgh', 'test', MCRYPT_MODE_C
 
 // Function utf8_encode() is deprecated since PHP 8.2;
 utf8_encode( 'test' );
+
+?>
+
+<!-- Must not trigger warnings or errors -->
+<?php if ( is_singular() ) : ?>
+	<p>Also must not trigger warnings or errors.</p>
+<?php endif; ?>
